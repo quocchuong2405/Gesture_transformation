@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Titles is how i figure out what gui is what-->
+  <title>PIP Page</title>
+  <style>
+    /* CSS 样式用于布局和按钮样式，你可以自行调整
+    -We cam use the body height/width to make objects fit nicely inside windows gui
+    */
+    
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #stop-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: #212327;
+      color: #f28300;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- 用于显示摄像头画面的容器 -->
+  <div id="video-container">
+    <!-- Runs video -->
+    <img src="{{ url_for('video') }}" frameborder="0" width="100%" height="100%"></img>
+  </div>
+  </script>
+   <!-- closes program -->
+  <a  href="/shutdown" id="stop-button">STOP</a>
+</body>
+</html>

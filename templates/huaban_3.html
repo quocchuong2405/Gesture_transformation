@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Titles is how i figure out what gui is what-->
+    <title>Gesture</title>
+    <link rel="stylesheet" href="./static/index.css" />
+    <link rel="stylesheet" href="./static/huaban_3.css" />
+    <script type="text/javascript" src="./huaban_3.js"></script>
+  </head>
+  <body>
+    <div class="flex-col page">
+      <!-- Title Bar-->
+      <div class="flex-row items-center section space-x-20">
+        <img
+          class="image"
+          src="https://i.ibb.co/NthdMNf/216074291.jpg"
+        />
+        <span class="text">Gesture</span>
+      </div>
+      <div class="flex-row">
+        <div class="flex-auto section_2">
+          <!-- Runs video -->
+          <img src="{{ url_for('cam')}}"></img>
+        </div>
+        <!-- Side Nav-->
+        <div class="flex-col shrink-0 section_3">
+          <span class="self-start text_2">Navigation bar</span>
+          <div class="shrink-0 divider view"></div>
+          <div class="flex-col justify-start items-center self-center text-wrapper">
+            <!-- Starts program-->
+            <a href="/pip" id="start-pip-button" class="font_1">START</a>
+          </div>
+          <div class="shrink-0 divider"></div>
+          <div class="flex-col justify-start items-center self-center text-wrapper">
+            <!-- Closes program-->
+            <a href="/shutdown" class="font_1">STOP</a>
+          </div>
+          <div class="shrink-0 divider"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
